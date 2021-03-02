@@ -1,0 +1,17 @@
+{
+  "name": "alfred-hashicorp-vault",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "node-vault": "^0.9.21"
+  },
+  "devDependencies": {
+    "@types/node-vault": "0.9.13"
+  },
+  "scripts": {
+    "alfredPackage": "rm -f zip alfred-hashicorp-vault.alfredworkflow && zip alfred-hashicorp-vault.alfredworkflow ./* -x@alfred_package.ignore",
+    "alfredLink": "rm -f ~/Library/Application\\ Support/Alfred/Alfred.alfredpreferences/workflows/user.workflow.alfred-hashicorp-vault && ln -s ${PWD} ~/Library/Application\\ Support/Alfred/Alfred.alfredpreferences/workflows/user.workflow.alfred-hashicorp-vault"
+  }
+}
