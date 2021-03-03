@@ -6,7 +6,7 @@ Workflow to open secrets in Hashicorp Vault.
 Watch out: As Vault does not offer a recursive list endpoint, this plugin will do a lot of requests against Vault.
 
 ### Installation
-1. Download the Workflow ([alfred_slack.alfredworkflow](https://nightly.link/klassm/alfred-hashicorp-vault/workflows/package/master/alfred-hashicorp-vault.alfredworkflow))
+1. Download the Workflow ([alfred-hashicorp-vault.alfredworkflow.zip](https://nightly.link/klassm/alfred-hashicorp-vault/workflows/package/master/alfred-hashicorp-vault.alfredworkflow.zip))
 2. Double click to install
 3. Create a `.alfred-vault.json` in your user home directory. The contents should look like: 
 ```json
