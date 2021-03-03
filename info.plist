@@ -4,6 +4,8 @@
 <dict>
 	<key>bundleid</key>
 	<string></string>
+	<key>category</key>
+	<string>Productivity</string>
 	<key>connections</key>
 	<dict>
 		<key>168FFAB2-BD15-4D6E-83EB-E868622DC9FD</key>
@@ -21,9 +23,9 @@
 		</array>
 	</dict>
 	<key>createdby</key>
-	<string></string>
+	<string>Matthias Klaß</string>
 	<key>description</key>
-	<string></string>
+	<string>Open vault secrets in the browser.</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
@@ -36,7 +38,7 @@
 				<key>alfredfiltersresults</key>
 				<true/>
 				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
+				<integer>2</integer>
 				<key>argumenttreatemptyqueryasnil</key>
 				<true/>
 				<key>argumenttrimmode</key>
@@ -119,6 +121,6 @@
 		</dict>
 	</dict>
 	<key>webaddress</key>
-	<string></string>
+	<string>https://github.com/klassm/alfred-hashicorp-vault</string>
 </dict>
 </plist>
