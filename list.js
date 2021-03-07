@@ -3,6 +3,7 @@ const nodeVault = require("node-vault");
 const process = require("process");
 const _ = require("lodash");
 const fs = require("fs");
+const alfy = require("alfy");
 
 const homedir = require('os').homedir();
 const xdgConfigHome = process.env.XDG_CONFIG_HOME;
@@ -71,8 +72,18 @@ function toAlfred(option) {
   }
 }
 
+async function getAllSecrets() {
+  const secrets = alfy.cache.get("secrets");
+  if (secrets) {
+    return secrets;
+  }
+  const newSecrets = await listAllSecrets();
+  alfy.cache.set("secrets", newSecrets, {maxAge: 1000 * 60 * 15});
+  return newSecrets;
+}
+
 async function listAllForAlfred() {
-  const secrets = await listAllSecrets();
+  const secrets = await getAllSecrets();
   const options = secrets.map(toAlfred);
   console.log(JSON.stringify({items: options}));
 }

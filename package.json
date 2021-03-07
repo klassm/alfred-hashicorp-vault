@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "alfy": "^0.10.0",
     "lodash": "^4.17.21",
     "node-vault": "^0.9.21"
   },
