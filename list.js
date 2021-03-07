@@ -42,15 +42,32 @@ async function listAllSecrets(path = "/") {
   return [...secretsFromPaths, ...result.secrets];
 }
 
-function toAlfred(option) {
+function matchOptionsFor(option) {
   const optionParts = option.split("/");
+  return optionParts.flatMap(part => {
+    const subParts = part.split(/[-_]/g);
+    const acronym = subParts.length >= 3
+        ? subParts.map(part => part.charAt(0)).join("")
+        : undefined;
+    return [
+      part, acronym, ...subParts
+    ].filter(it => it);
+  })
+}
+
+function titleFor(option) {
+  const optionParts = option.split("/");
+  return optionParts.slice(optionParts.length - 2).join(" ");
+}
+
+function toAlfred(option) {
   return {
     uid: option,
-    title: optionParts.slice(optionParts.length - 2).join(" "),
+    title: titleFor(option),
     subtitle: option,
     arg: `${url}/ui/vault/secrets/secret/show${option}`,
     autocomplete: option,
-    match: [option, ...optionParts].join(" ")
+    match: matchOptionsFor(option).join(" ")
   }
 }
 
