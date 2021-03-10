@@ -8,12 +8,6 @@ Watch out: As Vault does not offer a recursive list endpoint, this plugin will d
 ### Installation
 1. Download the Workflow ([alfred-hashicorp-vault.alfredworkflow.zip](https://nightly.link/klassm/alfred-hashicorp-vault/workflows/package/master/alfred-hashicorp-vault.alfredworkflow.zip))
 2. Double click to install
-3. Create a `.alfred-vault.json` in your user home directory. The contents should look like: 
-```json
-{
-  "token": "...",
-  "url": "https://vault.myUrl.com"
-}
-```
+3. Configure the plugin using Alfred (v-url, v-token)
 
 You can obtain a token by clicking on the user icon in the top right corner after logging in to Vault. Then select "Copy token".

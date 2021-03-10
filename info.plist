@@ -21,6 +21,32 @@
 				<false/>
 			</dict>
 		</array>
+		<key>4AF3214B-D5FE-4C13-89E2-DC0F2B7F40B5</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>158B0293-F0D7-4F36-89F9-9DAB38F891A9</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>E8D05C1B-3D8F-47F9-A480-5DCC670991E6</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>E9FDE110-52A0-40E8-917A-16D87AE3CFE7</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 	</dict>
 	<key>createdby</key>
 	<string>Matthias Klaß</string>
@@ -32,6 +58,113 @@
 	<string>Vault</string>
 	<key>objects</key>
 	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>./setPreference.js "vaultUrl" "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string>setPreference.js</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>158B0293-F0D7-4F36-89F9-9DAB38F891A9</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>v-url</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>Set Vault URL</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>4AF3214B-D5FE-4C13-89E2-DC0F2B7F40B5</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>./setPreference.js "vaultToken" "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string>setPreference.js</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>E9FDE110-52A0-40E8-917A-16D87AE3CFE7</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>v-token</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>Set Vault Token</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>E8D05C1B-3D8F-47F9-A480-5DCC670991E6</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string></string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>5E676335-F454-48C6-BF0F-F76C89D670BF</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -81,43 +214,52 @@
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>browser</key>
-				<string></string>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
-				<string></string>
-				<key>utf8</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
-			<key>uid</key>
-			<string>5E676335-F454-48C6-BF0F-F76C89D670BF</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
 	<key>uidata</key>
 	<dict>
+		<key>158B0293-F0D7-4F36-89F9-9DAB38F891A9</key>
+		<dict>
+			<key>xpos</key>
+			<integer>375</integer>
+			<key>ypos</key>
+			<integer>40</integer>
+		</dict>
 		<key>168FFAB2-BD15-4D6E-83EB-E868622DC9FD</key>
 		<dict>
 			<key>xpos</key>
 			<integer>160</integer>
 			<key>ypos</key>
-			<integer>220</integer>
+			<integer>295</integer>
+		</dict>
+		<key>4AF3214B-D5FE-4C13-89E2-DC0F2B7F40B5</key>
+		<dict>
+			<key>xpos</key>
+			<integer>165</integer>
+			<key>ypos</key>
+			<integer>40</integer>
 		</dict>
 		<key>5E676335-F454-48C6-BF0F-F76C89D670BF</key>
 		<dict>
 			<key>xpos</key>
-			<integer>380</integer>
+			<integer>375</integer>
 			<key>ypos</key>
-			<integer>220</integer>
+			<integer>295</integer>
+		</dict>
+		<key>E8D05C1B-3D8F-47F9-A480-5DCC670991E6</key>
+		<dict>
+			<key>xpos</key>
+			<integer>165</integer>
+			<key>ypos</key>
+			<integer>155</integer>
+		</dict>
+		<key>E9FDE110-52A0-40E8-917A-16D87AE3CFE7</key>
+		<dict>
+			<key>xpos</key>
+			<integer>375</integer>
+			<key>ypos</key>
+			<integer>155</integer>
 		</dict>
 	</dict>
 	<key>webaddress</key>

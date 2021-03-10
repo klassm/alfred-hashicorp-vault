@@ -1,20 +1,15 @@
 #!/usr/local/bin/node
 const nodeVault = require("node-vault");
-const process = require("process");
 const _ = require("lodash");
-const fs = require("fs");
 const alfy = require("alfy");
 
-const homedir = require('os').homedir();
-const xdgConfigHome = process.env.XDG_CONFIG_HOME;
-const baseDir = xdgConfigHome ?? homedir;
-const filePath = `${baseDir}/.alfred-vault.json`;
-const {token, url} = JSON.parse(fs.readFileSync(filePath));
+const vaultUrl = alfy.config.get("vaultUrl");
+const vaultToken = alfy.config.get("vaultToken");
 
 const vault = nodeVault({
   apiVersion: 'v1',
-  endpoint: url,
-  token,
+  endpoint: vaultUrl,
+  token: vaultToken,
   noCustomHTTPVerbs: true
 })
 
@@ -66,7 +61,7 @@ function toAlfred(option) {
     uid: option,
     title: titleFor(option),
     subtitle: option,
-    arg: `${url}/ui/vault/secrets/secret/show${option}`,
+    arg: `${vaultUrl}/ui/vault/secrets/secret/show${option}`,
     autocomplete: option,
     match: matchOptionsFor(option).join(" ")
   }
