@@ -74,11 +74,11 @@ function toAlfred(option) {
 
 async function getAllSecrets() {
   const secrets = alfy.cache.get("secrets");
-  if (secrets) {
+  if (secrets && secrets.length > 0) {
     return secrets;
   }
   const newSecrets = await listAllSecrets();
-  alfy.cache.set("secrets", newSecrets, {maxAge: 1000 * 60 * 15});
+  alfy.cache.set("secrets", newSecrets, {maxAge: 1000 * 60 * 60});
   return newSecrets;
 }
 
