@@ -15,7 +15,7 @@ const vault = nodeVault({
 
 async function listAllIn(path) {
   try {
-    const result = await vault.list(`secret/metadata${path}`)
+    const result = await vault.list(`secret/metadata/${path}`)
     const collection = result.data.keys.map(
         key => path + key);
     const groups = _.groupBy(collection,
@@ -30,7 +30,7 @@ async function listAllIn(path) {
   }
 }
 
-async function listAllSecrets(path = "/") {
+async function listAllSecrets(path = "") {
   const result = await listAllIn(path);
   const secretsFromPaths = (await Promise.all(
       result.paths.flatMap(foundPath => listAllSecrets(foundPath))))
@@ -45,9 +45,11 @@ function matchOptionsFor(option) {
     const acronym = subParts.length >= 3
         ? subParts.map(part => part.charAt(0)).join("")
         : undefined;
-    return [
-      part, acronym, ...subParts
-    ].filter(it => it);
+    return _.uniq(
+        [
+          part, acronym, ...subParts
+        ].filter(it => it)
+    );
   })
 }
 
@@ -61,7 +63,7 @@ function toAlfred(option) {
     uid: option,
     title: titleFor(option),
     subtitle: option,
-    arg: `${vaultUrl}/ui/vault/secrets/secret/show${option}`,
+    arg: option,
     autocomplete: option,
     match: matchOptionsFor(option).join(" ")
   }
@@ -80,7 +82,7 @@ async function getAllSecrets() {
 async function listAllForAlfred() {
   const secrets = await getAllSecrets();
   const options = secrets.map(toAlfred);
-  console.log(JSON.stringify({items: options}));
+  alfy.output(options);
 }
 
 void listAllForAlfred();
