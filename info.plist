@@ -20,6 +20,29 @@
 				<key>vitoclose</key>
 				<false/>
 			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>1AC8FE96-2766-45D4-ADEE-0A4D6447DA96</string>
+				<key>modifiers</key>
+				<integer>131072</integer>
+				<key>modifiersubtext</key>
+				<string>Copy single value</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>1AC8FE96-2766-45D4-ADEE-0A4D6447DA96</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>8499269D-9C59-4CB8-A8B3-D99AED3FDF2C</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
 		</array>
 		<key>4AF3214B-D5FE-4C13-89E2-DC0F2B7F40B5</key>
 		<array>
@@ -51,7 +74,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>8499269D-9C59-4CB8-A8B3-D99AED3FDF2C</string>
+				<string>1AC8FE96-2766-45D4-ADEE-0A4D6447DA96</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -366,6 +389,23 @@ echo $VALUE | pbcopy</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{query} </string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>1AC8FE96-2766-45D4-ADEE-0A4D6447DA96</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
@@ -374,7 +414,7 @@ echo $VALUE | pbcopy</string>
 		<key>0F4F8C97-A490-485F-905D-4568F4594598</key>
 		<dict>
 			<key>xpos</key>
-			<integer>380</integer>
+			<integer>445</integer>
 			<key>ypos</key>
 			<integer>295</integer>
 		</dict>
@@ -392,10 +432,17 @@ echo $VALUE | pbcopy</string>
 			<key>ypos</key>
 			<integer>295</integer>
 		</dict>
+		<key>1AC8FE96-2766-45D4-ADEE-0A4D6447DA96</key>
+		<dict>
+			<key>xpos</key>
+			<integer>360</integer>
+			<key>ypos</key>
+			<integer>455</integer>
+		</dict>
 		<key>22DE4617-9632-4768-8F0B-971AED93386C</key>
 		<dict>
 			<key>xpos</key>
-			<integer>595</integer>
+			<integer>685</integer>
 			<key>ypos</key>
 			<integer>425</integer>
 		</dict>
@@ -409,7 +456,7 @@ echo $VALUE | pbcopy</string>
 		<key>8499269D-9C59-4CB8-A8B3-D99AED3FDF2C</key>
 		<dict>
 			<key>xpos</key>
-			<integer>380</integer>
+			<integer>450</integer>
 			<key>ypos</key>
 			<integer>425</integer>
 		</dict>
