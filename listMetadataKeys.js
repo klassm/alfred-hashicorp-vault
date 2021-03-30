@@ -17,6 +17,18 @@ async function getValuesFor(metadata) {
   return result.data.data
 }
 
+function formatValue(value) {
+  const type = typeof value;
+  if (type === "string") {
+    return value.trim();
+  }
+  if (type === "object") {
+    return JSON.stringify(value);
+  }
+
+  return value;
+}
+
 async function listAll() {
   const [metadata, query] = alfy.input.split(" ").map(it => it.trim());
 
@@ -24,7 +36,7 @@ async function listAll() {
   const result = Object.entries(values).map(([key, value]) => ({
     title: key,
     subtitle: metadata,
-    arg: JSON.stringify(value)
+    arg: formatValue(value)
   }));
   const filtered = result.filter(
       item => !query || item.title.toLowerCase().includes(query.toLowerCase()));

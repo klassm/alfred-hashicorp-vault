@@ -374,7 +374,7 @@
 				<key>script</key>
 				<string>VALUE="{query}"
 osascript -e 'display notification "Copied value to clipboard."'
-echo $VALUE | pbcopy</string>
+echo "${VALUE}" | tr -d '\n' | pbcopy</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
