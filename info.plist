@@ -8,8 +8,31 @@
 	<string>Productivity</string>
 	<key>connections</key>
 	<dict>
+		<key>0080633D-CA7E-48BE-A7C9-50661F1EDAE2</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>4E9EF598-7FCF-48AC-9368-F9765CA00D63</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>168FFAB2-BD15-4D6E-83EB-E868622DC9FD</key>
 		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>4E9EF598-7FCF-48AC-9368-F9765CA00D63</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string>autotype secret</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
 			<dict>
 				<key>destinationuid</key>
 				<string>0F4F8C97-A490-485F-905D-4568F4594598</string>
@@ -57,11 +80,37 @@
 				<false/>
 			</dict>
 		</array>
+		<key>4E9EF598-7FCF-48AC-9368-F9765CA00D63</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>963D929D-A83D-4396-B6C2-A7F7E18E1577</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>8499269D-9C59-4CB8-A8B3-D99AED3FDF2C</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
 				<string>22DE4617-9632-4768-8F0B-971AED93386C</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>963D929D-A83D-4396-B6C2-A7F7E18E1577</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>81E64F16-5949-4029-9777-9741E7FD1859</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -154,27 +203,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>keyword</key>
-				<string>v-token</string>
-				<key>subtext</key>
-				<string></string>
-				<key>text</key>
-				<string>Set Vault Token</string>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>E8D05C1B-3D8F-47F9-A480-5DCC670991E6</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -198,6 +226,76 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>v-token</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>Set Vault Token</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>E8D05C1B-3D8F-47F9-A480-5DCC670991E6</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<true/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>2</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>va</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Loading</string>
+				<key>script</key>
+				<string></string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>listMetadata.js</string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Vault autotype secret</string>
+				<key>type</key>
+				<integer>8</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>0080633D-CA7E-48BE-A7C9-50661F1EDAE2</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -207,16 +305,81 @@
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
-				<string>openMetadataInBrowser.js</string>
+				<string>autotypeCredential.js</string>
 				<key>type</key>
 				<integer>8</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>0F4F8C97-A490-485F-905D-4568F4594598</string>
+			<string>81E64F16-5949-4029-9777-9741E7FD1859</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>2</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Loading</string>
+				<key>script</key>
+				<string>#!/usr/bin/env bash
+./listMetadataKeys.js</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>listCredentials.js</string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Vault autotype secret</string>
+				<key>type</key>
+				<integer>8</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>963D929D-A83D-4396-B6C2-A7F7E18E1577</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{query} </string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>4E9EF598-7FCF-48AC-9368-F9765CA00D63</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -264,6 +427,102 @@
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
 			<string>168FFAB2-BD15-4D6E-83EB-E868622DC9FD</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string></string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>openMetadataInBrowser.js</string>
+				<key>type</key>
+				<integer>8</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>0F4F8C97-A490-485F-905D-4568F4594598</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>VALUE="{query}"
+osascript -e 'display notification "Copied value to clipboard."'
+echo "${VALUE}" | tr -d '\n' | pbcopy</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>22DE4617-9632-4768-8F0B-971AED93386C</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>2</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Loading</string>
+				<key>script</key>
+				<string>#!/usr/bin/env bash
+./listMetadataKeys.js</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>listMetadataKeys.js</string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Vault copy secret</string>
+				<key>type</key>
+				<integer>8</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>8499269D-9C59-4CB8-A8B3-D99AED3FDF2C</string>
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
@@ -319,79 +578,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>alfredfiltersresults</key>
-				<false/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>2</integer>
-				<key>argumenttreatemptyqueryasnil</key>
-				<true/>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>1</integer>
-				<key>runningsubtext</key>
-				<string>Loading</string>
-				<key>script</key>
-				<string>#!/usr/bin/env bash
-./listMetadataKeys.js</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string>listMetadataKeys.js</string>
-				<key>subtext</key>
-				<string></string>
-				<key>title</key>
-				<string>Vault copy secret</string>
-				<key>type</key>
-				<integer>8</integer>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>8499269D-9C59-4CB8-A8B3-D99AED3FDF2C</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>68</integer>
-				<key>script</key>
-				<string>VALUE="{query}"
-osascript -e 'display notification "Copied value to clipboard."'
-echo "${VALUE}" | tr -d '\n' | pbcopy</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>22DE4617-9632-4768-8F0B-971AED93386C</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>argument</key>
 				<string>{query} </string>
 				<key>passthroughargument</key>
@@ -411,12 +597,19 @@ echo "${VALUE}" | tr -d '\n' | pbcopy</string>
 	<string></string>
 	<key>uidata</key>
 	<dict>
+		<key>0080633D-CA7E-48BE-A7C9-50661F1EDAE2</key>
+		<dict>
+			<key>xpos</key>
+			<integer>160</integer>
+			<key>ypos</key>
+			<integer>335</integer>
+		</dict>
 		<key>0F4F8C97-A490-485F-905D-4568F4594598</key>
 		<dict>
 			<key>xpos</key>
 			<integer>445</integer>
 			<key>ypos</key>
-			<integer>295</integer>
+			<integer>465</integer>
 		</dict>
 		<key>158B0293-F0D7-4F36-89F9-9DAB38F891A9</key>
 		<dict>
@@ -430,21 +623,21 @@ echo "${VALUE}" | tr -d '\n' | pbcopy</string>
 			<key>xpos</key>
 			<integer>160</integer>
 			<key>ypos</key>
-			<integer>295</integer>
+			<integer>465</integer>
 		</dict>
 		<key>1AC8FE96-2766-45D4-ADEE-0A4D6447DA96</key>
 		<dict>
 			<key>xpos</key>
 			<integer>360</integer>
 			<key>ypos</key>
-			<integer>455</integer>
+			<integer>625</integer>
 		</dict>
 		<key>22DE4617-9632-4768-8F0B-971AED93386C</key>
 		<dict>
 			<key>xpos</key>
 			<integer>685</integer>
 			<key>ypos</key>
-			<integer>425</integer>
+			<integer>595</integer>
 		</dict>
 		<key>4AF3214B-D5FE-4C13-89E2-DC0F2B7F40B5</key>
 		<dict>
@@ -453,19 +646,40 @@ echo "${VALUE}" | tr -d '\n' | pbcopy</string>
 			<key>ypos</key>
 			<integer>40</integer>
 		</dict>
+		<key>4E9EF598-7FCF-48AC-9368-F9765CA00D63</key>
+		<dict>
+			<key>xpos</key>
+			<integer>360</integer>
+			<key>ypos</key>
+			<integer>365</integer>
+		</dict>
+		<key>81E64F16-5949-4029-9777-9741E7FD1859</key>
+		<dict>
+			<key>xpos</key>
+			<integer>685</integer>
+			<key>ypos</key>
+			<integer>335</integer>
+		</dict>
 		<key>8499269D-9C59-4CB8-A8B3-D99AED3FDF2C</key>
 		<dict>
 			<key>xpos</key>
 			<integer>450</integer>
 			<key>ypos</key>
-			<integer>425</integer>
+			<integer>595</integer>
+		</dict>
+		<key>963D929D-A83D-4396-B6C2-A7F7E18E1577</key>
+		<dict>
+			<key>xpos</key>
+			<integer>445</integer>
+			<key>ypos</key>
+			<integer>335</integer>
 		</dict>
 		<key>C732C369-67DE-4391-BFE1-5B10FC16505D</key>
 		<dict>
 			<key>xpos</key>
 			<integer>160</integer>
 			<key>ypos</key>
-			<integer>425</integer>
+			<integer>595</integer>
 		</dict>
 		<key>E8D05C1B-3D8F-47F9-A480-5DCC670991E6</key>
 		<dict>
