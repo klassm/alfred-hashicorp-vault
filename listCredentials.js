@@ -32,7 +32,8 @@ function valuesToCredentials(values) {
   .map(values => {
     const user = values.find(([key]) => key.toLowerCase().includes("user"));
     const password = values.find(([key]) => key.toLowerCase().includes("pass"));
-    return user && password ? {key: user[0].replace(/user(name)?/i, ""), username: user[1], password: password[1]}
+    const key = user[0].replace(/user(name)?/i, "").replace(/_$/, "");
+    return user && password ? {key, username: user[1], password: password[1]}
         : undefined;
   })
   .filter((it) => !!it)
